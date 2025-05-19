@@ -1,0 +1,37 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'base.css' %}">
+        {% block link %}
+        {% endblock link %}
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="icon">
+                    <img src="" alt="icon">
+                    <h1 class="text-icon">WOROLD IT</h1>
+                </div >
+                <div class="navi">
+                    <a href="">Головна</a>
+                    <a href="">Мої Публікації</a>
+                    <a href="">Друзі</a>
+                    <a href="">Чати</a>
+                    <a href="">Налаштування</a>
+                    <button>Вихід</button>
+                </div>
+            </nav>
+        </header>
+        <main>
+        {% block content %}
+
+        {% endblock %}            
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
