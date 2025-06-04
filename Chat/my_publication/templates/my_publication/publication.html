@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load customtags %}
+
+{% block title %}
+    MY PUBLICATION
+{% endblock title %}
+
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'my_publication/publication.css' %}">
+{% endblock link %}
+
+
+{% block script %}
+    
+{% endblock script %}
+    
+
+{% block content %}
+
+    <div class="create">
+        <p>Текст публікації</p>
+        <div class="change">
+            <img src="" alt="smile">
+            <a href="{% url 'publication_form' %}">Перейти до оформлення</a>
+        </div>
+    </div>
+{% endblock content %}
+    

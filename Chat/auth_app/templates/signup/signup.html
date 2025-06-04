@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load customtags %}
+
+
+{% block script %}
+    <script src="{% static  'signup/script.js' %}" defer></script>
+{% endblock script %}
+    
+
+{% block title %}
+    REGISTER PAGE
+{% endblock title %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'signup/css/signup.css' %}">
+{% endblock link %}
+    <!-- <div class="con">
+        <div class="links">
+            <a href="" class="now">Реєстрація</a>
+            <a href="" class="another">Авторизація</a>
+        </div>
+        <h3>Приєднуйтесь до World IT</h3>
+        {% csrf_token %}
+        <div class="inputs">
+            <label for="email">Електронна пошта</label>
+            <input type="email" class="email" placeholder="you@example.com">
+
+            <label for="password">Пароль</label>
+            <input type="password" class="password" placeholder="Введи пароль">
+
+            <label for="confirm_password">Підтведи пароль</label>
+            <input type="password" class="confirm_password" placeholder="Повтори пароль">
+            
+        </div>
+        <button type="submit">Створити акаунт</button>
+    </div> -->
+
+<!-- <form action="" method="post">
+
+    <input type="hidden" name="csrfmiddlewaretoken" value="FDh3QwRHJTLFUP6rhQ1LSjmdc7VgoIsLFHGWZQHOPTQgRFZ7wiQgpBmVPaL4e78E">
+
+    
+        <div class="form-field">
+            <label for="id_username">
+                <p>Username</p>
+            </label>
+            <p><input type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus required aria-describedby="id_username_helptext" id="id_username"></p>
+        </div>
+        
+    
+        <div class="form-field">
+            <label for="id_password1">
+                <p>Пароль</p>
+            </label>
+            <p><input type="password" name="password1" class="password" placeholder="Введи пароль" required id="id_password1"></p>
+        </div>
+        
+    
+        <div class="form-field">
+            <label for="id_password2">
+                <p>Підтведи пароль</p>
+            </label>
+            <p><input type="password" name="password2" class="confirm_password" placeholder="Повтори пароль" required id="id_password2"></p>
+        </div>
+        
+    
+        <div class="form-field">
+            <label for="id_email">
+                <p>Електронна пошта</p>
+            </label>
+            <p><input type="text" name="email" class="email" placeholder="you@example.com" maxlength="320" required id="id_email"></p>
+        </div>
+        
+    
+    
+    
+        <button type="submit" >Зареєструватись</button>
+    
+</form> -->
+
+
+{% block content %}
+    {% render_custom_form %}
+{% endblock content %}
+    
+    
+    

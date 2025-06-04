@@ -1,0 +1,73 @@
+.confirm_box{
+    display: flex;
+    background-color: white;
+    width: 488px;
+    height: 444px;
+    border-radius: 20px;
+    border: solid white;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;    
+    margin: auto;
+    margin-top: 103.5px;
+    gap: 36px;
+}
+
+.send{
+    width: 400px;
+    height: 52px;
+    border: solid #543C52;
+    border-radius: 1234px;
+    color: white;
+    background-color: #543C52;
+}
+.back{
+    color: #543C52;
+    width: 400px;
+    height: 18px;
+    text-decoration: none;
+}
+.confirm_post{
+    text-align: center;
+    width: 341px;
+    height: 39px;
+
+}
+.confirm_post_text{
+    text-align: center;
+    width: 400px;
+    height: 54px;
+    
+}
+.confirm_input{
+    display: flex;
+    width: 400px;
+    height: 69px;
+    flex-direction: row;
+    gap: 16px;
+}
+.confirm_input input{
+    border: #CDCED2 solid;
+    width: 50px;
+    height: 45px;
+    border-radius: 10px;
+    text-align: center;
+}
+.confirm_input p{
+    width: 139px;
+    height: 18px;
+    
+}
+.confirm_button{
+    margin-top: 20px;
+    display: flex;
+    width: 400px;
+    height: 120px;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+}
+
+.form{
+    margin-top:-30px;
+}

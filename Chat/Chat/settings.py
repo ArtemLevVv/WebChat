@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'echo.ii.mail02@gmail.com'
+EMAIL_HOST_PASSWORD = 'pxob usdf enqe rtvn'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Application definition
 
@@ -61,13 +68,13 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'template',
-            BASE_DIR / 'home_app' / 'template',
-            BASE_DIR / 'auth_app' / 'template',
-            BASE_DIR / 'my_publication' / 'template',
-            BASE_DIR / 'friends' / 'template',
-            BASE_DIR / 'chats' / 'template',
-            BASE_DIR / 'acount_set' / 'template'
+            BASE_DIR / 'templates',
+            BASE_DIR / 'home_app' / 'templates',
+            BASE_DIR / 'auth_app' / 'templates',
+            BASE_DIR / 'my_publication' / 'templates',
+            BASE_DIR / 'friends' / 'templates',
+            BASE_DIR / 'chats' / 'templates',
+            BASE_DIR / 'acount_set' / 'templates'
             ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -136,8 +143,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'auth_app' / 'static',
     BASE_DIR / 'my_publication' / 'static',
     BASE_DIR / 'friends' / 'static',
-    BASE_DIR / '',
-    BASE_DIR / 'acount_set' / 'static'
+    BASE_DIR / 'acount_set' / 'static',
 ]
 
 MEDIA_URL = '/media/'
