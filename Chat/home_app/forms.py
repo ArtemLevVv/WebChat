@@ -1,6 +1,6 @@
 from django import forms
 
-class ModalFormExtraInfo(forms):
+class ModalFormExtraInfo(forms.Form):
     username = forms.CharField(
         label="Ім'я",
         required=True,

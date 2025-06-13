@@ -22,9 +22,10 @@ class UserPostModel(models.Model):
     name = models.CharField(max_length=100)
     topic = models.CharField(max_length=150)
     tags = models.ForeignKey(to= TagModel, null= True, on_delete= models.DO_NOTHING)
+    text = models.TextField()
     link = models.CharField(max_length=255)
     # image = models.ImageField()
-    views = models.IntegerField()
-    like = models.IntegerField()
+    views = models.IntegerField(default= 0)
+    like = models.IntegerField(default= 0)
     
     

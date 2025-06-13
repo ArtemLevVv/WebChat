@@ -44,3 +44,31 @@
 /* .change button{
     margin-top: 20px;
 } */
+
+.posts{
+    width: 925px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border: 1px #CDCED2 solid;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+.user{
+    width: 925px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: #CDCED2 1px solid;
+}
+.user span{
+    display: flex;
+}
+.text{
+    margin: 16px 16 16 16px;
+    width: 925px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    flex-direction: column;
+}

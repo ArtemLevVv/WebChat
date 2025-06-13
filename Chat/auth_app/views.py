@@ -9,6 +9,7 @@ from django.conf import settings
 import time
 from django.http import HttpRequest
 from django.shortcuts import redirect
+from .models import UserLoginModel
 
 # ======================= КОДИ ==========================
 
@@ -48,6 +49,7 @@ class ViewSignup(CreateView):
     def form_valid(self, form):
         user = form.save()
         code = generate_time_based_code()
+        UserLoginModel.objects.create(login= user)
         print(user.username, code)
         send_code_email(user.username, code)
         return super().form_valid(form)

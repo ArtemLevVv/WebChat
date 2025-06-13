@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="{% static 'base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% block link %}
         {% endblock link %}
     </head>
@@ -39,10 +39,10 @@
         {% if show_profile %}
             <div class="profile">
                 <img src="" alt="user_icon">
-                <h2>username</h2>
+                <h2>{{username}}</h2>
                 <p class="login"></p>
                 <div class="profile_inf">
-                    <div class="posts">
+                    <div class="amout_of_posts">
                         <h2>0</h2>
                         <p>Дописи</p>
                     </div>
@@ -62,18 +62,30 @@
 
             {% endblock %}        
         </div>
-
+        
+        <!-- <form action="">
+            <h2>Додай деталі про себе</h2>
+            <label for="name">Ім'я</label>
+            <input type="text" class="name" placeholder="Введіть Ваше ім'я">
+            <label for="last_name">Прізвище</label>
+            <input type="text" class="last_name" placeholder="Введіть Ваше прізвище"> 
+            <label for="login">Ім'я користувача</label>
+            <input type="text" class="login" placeholder="@">
+            <button>Продовжити</button>
+        </form> -->
         {% if show_modal %}
             <div class="background">
                 <div class="modal">
-                    <form action="">
+                    <form action="" method="post">
+                        {% csrf_token %}
                         <h2>Додай деталі про себе</h2>
-                        <label for="name">Ім'я</label>
-                        <input type="text" class="name" placeholder="Введіть Ваше ім'я">
-                        <label for="last_name">Прізвище</label>
-                        <input type="text" class="last_name" placeholder="Введіть Ваше прізвище"> 
-                        <label for="login">Ім'я користувача</label>
-                        <input type="text" class="login" placeholder="@">
+                        {% for field in form %}
+                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            {{ field }}
+                            {% if field.errors %}
+                                <div class="form-error">{{ field.errors }}</div>
+                            {% endif %}
+                        {% endfor %}
                         <button>Продовжити</button>
                     </form>
                 </div>

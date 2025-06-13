@@ -11,14 +11,52 @@
     <link rel="stylesheet" href="{% static 'form_publication/form_publication.css' %}">
 {% endblock link %}
 
+<!-- <h2>Створення публікації</h2>
+
+<label>Назва публікації</label>
+<input name="" type="text" id="postTitle" placeholder="Природа, книга і спокій 🌿">
+
+<label>Тема публікації</label>
+<input type="text" id="postTopic" placeholder="Напишіть тему публікації">
+
+<div class="tags">
+    <span>#відпочинок</span>
+    <span>#натхнення</span>
+    <span>#життя</span>
+    <span>#природа</span>
+    <span>#читання</span>
+    <span>#спокій</span>
+    <span>#гармонія</span>
+    <span>#музика</span>
+    <span>#фільми</span>
+    <span>#подорожі</span>
+    <button onclick="addTag()">+</button>
+</div>
+
+<textarea id="postContent" rows="5" placeholder="Інколи найкращі ідеї народжуються в тиші..."></textarea>
+
+<label>Посилання</label>
+<div class="link-wrapper">
+    <input type="text" id="postLink" placeholder="https://www.instagram.com/world.it...">
+    <button onclick="addLink()">+</button>
+</div>
+
+<div class="actions">
+    <button onclick="attachFile()">📎</button>
+    <button onclick="attachEmoji()">😊</button>
+    <button class="publish" onclick="publishPost()">Публікація</button>
+</div> -->
 
 {% block content %}
-<div class="con">
-     <h1>Створення публікації</h1>
-    <div>
-        <p>Назва публыкації</p>
+    <div class="container">
+        <form action="" method="post">
+            <div class="modal">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Публікація</button>
+            </div>
+        </form>
     </div>
-</div>
 {% endblock content %}
     
     
