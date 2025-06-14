@@ -51,8 +51,13 @@
     <div class="container">
         <form action="" method="post">
             <div class="modal">
-                {% csrf_token %}
-                {{ form.as_p }}
+                <div class="modal_in ">
+                    <a href="{% url 'my_publication' %}" class="krestik">×</a>
+                    <h2>Створення публікації</h2>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    
+                </div>
                 <button>Публікація</button>
             </div>
         </form>

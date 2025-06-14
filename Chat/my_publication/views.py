@@ -16,7 +16,7 @@ class ViewPublication(TemplateView):
         context = super().get_context_data(**kwargs)
         context['show_profile'] = True
         context['username'] = self.request.user.username
-        context['posts'] = UserPostModel.objects.filter(user=self.request.user)
+        context['posts'] = UserPostModel.objects.filter(user=self.request.user).order_by('-id')
         return context
     
 class ViewFormPublication(CreateView):

@@ -13,7 +13,7 @@
 
 
 {% block script %}
-    
+    <script src="{% static 'my_publication/js/script.js' %}" defer></script>
 {% endblock script %}
     
 
@@ -36,7 +36,7 @@
                 </span>
                 <span class="left">
                     <img src="" alt="pidpys">
-                    <button>
+                    <button class="edit-post" id="{{ post.id }}">
                         .
                         .
                         .

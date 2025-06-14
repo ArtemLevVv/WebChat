@@ -1,4 +1,4 @@
-
+/* 
 
 .container {
   width: 90%;
@@ -86,4 +86,71 @@ input[type="text"], textarea {
   background-color: #4a1a5c;
   color: white;
   padding: 8px 16px;
+} */
+.modal{
+  margin: auto;
+  margin-top: 50px;
+  /* display: flex; */
+  width: 773px;
+  height: 669px;
+  /* top: 879px; */
+  border-radius: 20px;
+  /* margin-top: -1px; */
+}
+.modal h2{
+  width: 685px;
+  height: 39px;
+  text-align: left;
+}
+.name{
+  width: 343px;
+  height: 42px;
+  border-radius: 10px;
+}
+.topic{
+  width: 343px;
+  height: 42px;
+  border-radius: 10px;
+
+}
+.text{
+  width: 685px;
+  height: 126px;
+  border-radius: 10px;
+
+}
+.krestik{
+  text-decoration: none;
+  width: 685px;
+  height: 5px;
+  margin-left: 750px;
+}
+.link{
+  width: 313px;
+  height: 42px;
+  border-radius: 10px;
+}
+/* .krestik p{
+  width: 20px;
+  height: 20px;
+} */
+.modal button{
+  width: 130px;
+  height: 40px;
+  border-radius: 1234px;
+  background-color: #543C52;
+  color: white;
+  margin-left: 600px;
+}
+.modal_in{
+  display: flex;
+  width: 685px;
+  height: 502px;
+  /* gap: 16px; */
+  flex-direction: column;
+}
+.modal_in p label{
+  display: flex;
+  width: 121px;
+  height: 18px;
 }

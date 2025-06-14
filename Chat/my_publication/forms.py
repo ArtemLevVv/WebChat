@@ -9,13 +9,22 @@ class UserPostForm(forms.ModelForm):
     name = forms.CharField(
         label="Ім'я посту",
         required=True,
-        widget=forms.TextInput(attrs={'class': 'name'})
+        widget=
+        forms.TextInput(
+            attrs={  
+                    'class': 'name',
+                    'placeholder': "Природа, книга і спокій 🌿"
+        })
     )
 
     topic = forms.CharField(
         label="Тема посту",
         required=True,
-        widget=forms.Textarea(attrs={'class': 'topic'})
+        widget=forms.Textarea(
+            attrs={
+                'class': 'topic',
+                'placeholder': "Напишіть тему публікації"
+                })
     )
 
     tags = forms.ModelChoiceField(
@@ -26,13 +35,12 @@ class UserPostForm(forms.ModelForm):
     )
 
     text = forms.CharField(
-        label='Текст посту',
         required=True,
         widget=forms.Textarea(attrs={'class': 'text'})
     )
 
     link = forms.CharField(
-        label='Додаткове посилання',
+        label='посилання',
         required=False,
         widget=forms.TextInput(attrs={'class': 'link'})
     )

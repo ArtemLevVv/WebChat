@@ -7,6 +7,7 @@ from django.http import HttpRequest
 from .forms import ModalFormExtraInfo
 from django.urls import reverse_lazy
 from django.contrib.auth.models import User
+from my_publication.models import UserPostModel
 
 # Create your views here.
 
@@ -26,7 +27,8 @@ class ViewHome(FormView):
         print(self.request.user.username)
         if user.is_authenticated and not self.request.user.email:
             t_f_show = True
-        
+
+        context['posts'] = UserPostModel.objects.order_by('-id')
         context['form'] = self.form_class()
         context['show_modal'] = t_f_show
         context['show_profile'] = True
@@ -36,19 +38,16 @@ class ViewHome(FormView):
     def form_valid(self, form):
         user = self.request.user
 
-        # отримуємо новий логін
         new_login = form.cleaned_data['login']
 
         if User.objects.filter(username=new_login).exclude(pk=user.pk).exists():
             form.add_error('login', 'Цей логін уже зайнятий іншим користувачем.')
             return self.form_invalid(form)
 
-        # змінюємо username
+        user.email = user.username 
         user.username = new_login
 
-        # старий username (який був email) — зберігаємо як email
-        user.email = new_login  # або якщо email окремо, то form.cleaned_data['email']
-
+        print(user.email)
         user.first_name = form.cleaned_data['username']
         user.last_name = form.cleaned_data['last_name']
 
