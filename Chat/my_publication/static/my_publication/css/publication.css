@@ -1,0 +1,129 @@
+.create{
+    display: flex;
+    width: 923;
+    height: 120;
+    background-color: #ffffff;
+    border: solid #CDCED2;
+    border-radius: 10px;
+}
+.create p{
+    text-align: center;
+    color: #81818D;
+    margin-left: 10px;
+}
+.change img{
+    justify-content: right;
+    width: 40 px;
+    height: 40 px;
+    border: #543C52 1px;
+    border-radius: 190px;
+    padding: 10px;
+    gap: 10px;
+}
+.change a{
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    width: 190px;
+    /* height: 40px; */
+    background-color: #543C52;
+    border-radius: 1234px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+.change{
+    display: flex;
+    width: 800px;
+    height: 110px;
+    align-items: end;
+    justify-content: right;
+}
+
+/* .change button{
+    margin-top: 20px;
+} */
+
+.posts{
+    width: 925px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border: 1px #CDCED2 solid;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+.edit-post{
+    font-size: 10px;        /* розмір крапок */
+    line-height: 5px;       /* відстань між рядками */
+    padding: 0;   
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: white;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+.user{
+    width: 925px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: #CDCED2 1px solid;
+}
+.user span{
+    display: flex;
+}
+.text{
+    margin: 16px 16 16 16px;
+    width: 925px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    flex-direction: column;
+}
+.edit{
+    width: 345px;
+    height: 140px;
+    background-color: #E9E5EE;
+}
+.modal-window{
+    display: none;
+    flex-wrap: wrap;
+    width: 340px;
+    height: 140px;
+    background-color: #E9E5EE;
+    border: #E9E5EE;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.all{
+    display: flex;
+}
+.h-l{
+    width: 345px;
+    height: 1px;
+    background-color: #CDCED2;
+}
+.dots {
+    width: 20px;
+    height: 20px;
+    margin-left: 300px;
+    margin-top: 10px;
+    background-color: #E9E5EE;
+    border: 1px solid #E9E5EE;
+    font-size: 10px;        /* розмір крапок */
+    line-height: 5px;       /* відстань між рядками */
+    padding: 0;             /* прибрати внутрішній відступ */
+    text-align: center;
+    cursor: pointer;
+}
+.modal-window button{
+    width: 200px;
+    height: 20px;
+    background-color: #E9E5EE;
+    border: #E9E5EE;
+
+}
