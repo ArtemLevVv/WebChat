@@ -1,34 +1,18 @@
-document.querySelectorAll('.edit-post').forEach(button => {
-    let show_window = false;
-    
-    button.addEventListener('click', () => {
-        show_window = !show_window;
+document.addEventListener('DOMContentLoaded', () => {
+    const editButtons = document.querySelectorAll('.edit-post');
 
-      // Контейнер тексту, який відповідає цьому посту
-        const postDiv = button.closest('.posts');
-        const container = postDiv.querySelector('.text');
+    editButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const postId = button.id;
+            const modal = document.querySelector(`.modal-window-${postId}`);
 
-      // Якщо вже є блок - видалити
-        const existingCon = container.querySelector('.edit-controls');
-        if (existingCon) {
-        existingCon.remove();
-        }
-
-        if (show_window) {
-        // Створюємо блок з кнопками
-        const con = document.createElement('div');
-        con.classList.add('edit-controls');  // клас для стилізації, щоб потім легко знайти
-
-        const conButtonEdit = document.createElement('button');
-        conButtonEdit.textContent = 'Редагувати допис';
-
-        const conButtonDelete = document.createElement('button');
-        conButtonDelete.textContent = 'Видалити публікацію';
-
-        con.appendChild(conButtonEdit);
-        con.appendChild(conButtonDelete);
-
-        container.appendChild(con);
-        }
+            if (modal) {
+                if (modal.style.display === 'flex') {
+                    modal.style.display = 'none';
+                } else {
+                    modal.style.display = 'flex';
+                }
+            }
+        });
     });
 });

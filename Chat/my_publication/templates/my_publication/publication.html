@@ -8,7 +8,7 @@
 
 
 {% block link %}
-    <link rel="stylesheet" href="{% static 'my_publication/publication.css' %}">
+    <link rel="stylesheet" href="{% static 'my_publication/css/publication.css' %}">
 {% endblock link %}
 
 
@@ -28,31 +28,41 @@
     </div>
     
     {% for post in posts %}
-        <div class="posts">
-            <div class="user">
-                <span class="right">
-                    <img src="" alt="user">
-                    <h4>{{post.user}}</h4>
-                </span>
-                <span class="left">
-                    <img src="" alt="pidpys">
-                    <button class="edit-post" id="{{ post.id }}">
-                        .
-                        .
-                        .
-                    </button>
-                </span>
-            </div>
-            <div class="text">
-                <h4>{{post.topic}}</h4>
-                <p>{{post.text}}</p>
-                <a href="">{{post.link}}</a>
-            </div>
-            <div class="images">
+        <div class="all">
+            <div class="posts">
+                <div class="user">
+                    <span class="right">
+                        <img src="" alt="user">
+                        <h4>{{post.user}}</h4>
+                    </span>
+                    <span class="left">
+                        <img src="" alt="pidpys">
+                        <button class="edit-post" id="{{ post.id }}">
+                            •<br>•<br>•
+                        </button>
+                    </span>
+                </div>
+                <div class="text">
+                    <h4>{{post.topic}}</h4>
+                    <p>{{post.text}}</p>
+                    <a href="">{{post.link}}</a>
+                </div>
+                <div class="images">
 
-            </div>
-            <div class="info">
+                </div>
+                <div class="info">
 
+                </div>
+            </div>
+            <div class="modal-window modal-window-{{post.id}}">
+                <button class="dots">
+                    •<br>•<br>•
+                </button>
+                <img src="" alt="edit">
+                <button>Редагувати допис</button>
+                <div class="h-l"></div>
+                <img src="" alt="del">
+                <button>Видалити публікацію</button>
             </div>
         </div>
     {% endfor %}
