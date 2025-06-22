@@ -78,3 +78,28 @@ input:hover{
     transform: scale(1.05);
     transition: 0.3s;
 }
+nav{
+    width: 100vw;
+    height: 88px;
+    margin: -8px 0 0 -8px;
+    /* padding: 0 16px 0 0; */
+    display: flex;
+    background-color: white;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 16px;
+    
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    /* background-color: blue; */
+    width: 145px;
+    margin-left: 80px;
+    align-items: center;
+}
+.content{
+    position: static;
+    /* width: auto; */
+    
+}

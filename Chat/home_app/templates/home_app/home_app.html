@@ -29,12 +29,11 @@
                 </span>
                 <span class="left">
                     <img src="" alt="pidpys">
-                    <button>
-                        .
-                        .
-                        .
+                    <button class="edit-post" id="{{ post.id }}">
+                        •<br>•<br>•
                     </button>
                 </span>
+
             </div>
             <div class="text">
                 <h4>{{post.topic}}</h4>
@@ -46,6 +45,16 @@
             </div>
             <div class="info">
 
+            </div>
+            <div class="modal-window modal-window-{{post.id}}">
+                <button class="dots">
+                    •<br>•<br>•
+                </button>
+                <img src="" alt="edit">
+                <button>Редагувати допис</button>
+                <div class="h-l"></div>
+                <img src="" alt="del">
+                <button>Видалити публікацію</button>
             </div>
         </div>
     {% endfor %}
