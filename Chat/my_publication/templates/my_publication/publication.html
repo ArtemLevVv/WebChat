@@ -58,11 +58,20 @@
                 <button class="dots">
                     •<br>•<br>•
                 </button>
-                <img src="" alt="edit">
-                <button>Редагувати допис</button>
+                <form action="{% url 'publication_form' %}" method="get">
+                    <a href="{% url 'edit_post' post.id %}" class="edit-button" class="do">
+                        <img src="path_to_edit_icon" alt="edit">
+                        Редагувати допис
+                    </a>
+                </form>
                 <div class="h-l"></div>
-                <img src="" alt="del">
-                <button>Видалити публікацію</button>
+                <form action="{% url 'delete_post' post.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="do">
+                        <img src="path_to_delete_icon" alt="del">
+                        Видалити публікацію
+                    </button>
+                </form>
             </div>
         </div>
     {% endfor %}

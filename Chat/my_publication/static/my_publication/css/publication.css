@@ -120,10 +120,11 @@
     text-align: center;
     cursor: pointer;
 }
-.modal-window button{
+.edit-button, .do{
+    text-decoration: none;
     width: 200px;
     height: 20px;
     background-color: #E9E5EE;
     border: #E9E5EE;
-
+    color: black;
 }
