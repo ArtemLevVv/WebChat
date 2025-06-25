@@ -1,0 +1,80 @@
+.con{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 130px;
+    width: 488px;
+    height: 552px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    flex-direction: column;
+    border: white solid;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+.con h3{
+    margin-top: 20px;
+}
+.con a{
+    font-size: 34px;
+}
+.con button{
+    margin-top: 20px;
+    width: 400px;
+    height: 52px;
+    background-color: #543C52;
+    color: white;
+    border: #543C52 solid;
+    border-radius: 1234px;
+}
+.now {
+    color: #070A1C;
+}
+.another{
+    color: #81818D;
+    text-decoration: none;
+}
+.links{
+    margin-top: 20px;
+    display: flex;
+    gap: 24px;
+}
+.inputs{
+    margin-top: -10px;
+    width: 400px;
+    /* height: 230px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* gap: 16px; */
+    text-align: center;
+}
+.inputs input{
+    border: #CDCED2 solid;
+    border-radius: 10px;
+    height: 42px;    
+    display: flex;
+    font-size: 16px;
+    width: 400px;
+}
+label{
+    height: 40px;
+    width: 400px;
+    font-size: 20px;
+    text-align: left;
+}
+body{
+    background-color:  #E9E5EE;
+}
+
+.con button:hover{
+    background-color: #332432;
+    border: #332432;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+input:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}

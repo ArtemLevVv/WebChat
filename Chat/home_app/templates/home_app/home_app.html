@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    HOME PAGE
+{% endblock title %}
+
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'home_app/home_app.css' %}">
+{% endblock link %}
+    
+
+{% block content %}
+<div class="Posts">
+    <div class="author">
+        <img src="" alt="fotoauthora" class="fotoauthora">
+        <p>Нікнейм</p>
+        <img src="" alt="налаштування" class="enother">
+        <img src="" alt="розпис" class="rozpus">
+    </div>
+    <div class="text">
+        <p class="dopus">Lorem ipsum dolor sit amet.</p>
+        <p class="tags">#відпочинок</p>
+    </div>
+    <div class="images">
+        <img src="" alt="люди">
+        <img src="" alt="сонце">
+        <img src="" alt="природа">
+        <img src="" alt="спорт">
+        <img src="" alt="школа">
+        <img src="" alt="універ">
+        <img src="" alt="родина">
+        <img src="" alt="спільнота">
+        <img src="" alt="дерева">
+    </div>
+    <div class="media">
+        <img src="" alt="like" class="like">
+        <img src="" alt="views" class="views1">
+    </div>
+</div>
+
+{% endblock content %}
+    

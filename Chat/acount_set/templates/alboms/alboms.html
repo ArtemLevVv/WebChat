@@ -1,0 +1,116 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alboms</title>
+        {% block link %}
+        <link rel="stylesheet" href="{% static 'alboms/alboms.css' %}">
+        {% endblock link %}
+    </head>
+    <header>
+            <nav>
+                <div class="icon">
+                    <img src="{% static 'images/IT.png' %}" alt="icon">
+                    <h1 class="text-icon">WOROLD IT</h1>
+                </div >
+                <div class="navi">
+                    <a href="{% url 'home_app' %}">
+                        <img src="{% static 'images/home.png' %}" alt="">
+                        Головна</a>
+                    <a href="{% url 'my_publication' %}">
+                        <img src="{% static 'images/publication.png' %}" alt="">
+                        Мої Публікації</a>
+                    <a href="{% url 'friends' %}">
+                        <img src="{% static 'images/friends.png' %}" alt="">
+                        Друзі</a>
+                    <a href="{% url 'chats' %}">
+                        <img src="{% static 'images/chats.png' %}" alt="">
+                        Чати</a>
+                    <a href="{% url 'acount_set'  %}">
+                        <img src="{% static 'images/settings.png' %}" alt="">
+                        Налаштування</a>
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button class="exitt">
+                            <img src="{% static 'images/exit.png' %}" alt="">
+                            Вихід</button>
+                    </form>
+                </div>
+            </nav>
+    </header>
+    <body class="rr">
+        {% block script %}
+        {% endblock script %}
+        {% block content %}
+         <a href="{% url 'alboms' %}" class="links">Альбоми</a>
+         <div class="my_photo">\
+            <h1>Мої фото</h1>
+            <button class="add_photo">
+                <img src="{% static 'image/dodatu_zoobrazhenya.png' %}" alt="" class="icona">
+                <img src="{% static 'image/nadpusfoto.png' %}" alt="" class="nadpus">
+            </button>
+         </div>
+         <div class="add_albom">
+            <h1>Немає ще жодного альбома</h1>
+            <button  class="add_albombut">
+                <img src="{% static 'image/plus.png' %}" alt="" class="icona">
+                <img src="{% static 'image/napusplus.png' %}" alt="" class="nadpus">
+            </button>
+         </div>
+         <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Зберегти альбом</button>
+         </form>
+         <!-- <main class="main-content">
+            <header class="header">
+                <button class="add-photo">Додати фото</button>
+            </header1>
+
+            <section class="my-photo">
+                <h2>Моє фото</h2>
+                <div class="photo-frame">
+                    <div class="settings-icon">⚙️</div>
+                </div>
+            </section>
+
+            <section class="info-block">
+                <p><strong>Настрій</strong></p>
+                <p>Природа, 2025 рік</p>
+            </section>
+
+            <section class="gallery">
+                <h2>Фотографії!!!</h2>
+                <div class="photo-grid">
+                    <div class="photo-item">
+                        <div class="photo-placeholder"></div>
+                        <div class="photo-icons">
+                            <span>👁️</span>
+                            <span>🏠</span>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <div class="photo-placeholder"></div>
+                        <div class="photo-icons">
+                            <span>👁️</span>
+                            <span>🏠</span>
+                        </div>
+                    </div>
+                    <div class="photo-item">
+                        <div class="photo-placeholder"></div>
+                        <div class="photo-icons">
+                            <span>👁️</span>
+                            <span>🏠</span>
+                        </div>
+                    </div>
+                    <div class="photo-item add-new">
+                        <span>＋</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div> -->
+         {% endblock content %}
+    </body>
+</html>

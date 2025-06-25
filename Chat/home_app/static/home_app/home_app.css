@@ -1,0 +1,68 @@
+/* flexwrap
+display flex */
+.author{
+    background-color: #FFFFFF;
+    width: 1300px;
+    height: 89px;
+    border: #CDCED2 1px solid;
+    border-radius: 20px 20px 0px 0px;
+    flex-direction: row;
+}
+.fotoauthora{
+    height: 46px;
+    width: 46px;
+    border: black 1px solid;
+    border-radius: 60px;
+    justify-content: left;
+}
+/* .author p{
+    font-size: 25px;
+    margin-left: 52px;
+}
+.enother{
+    height: 20px;
+    width: 20px;
+    margin-right: 7px;
+}
+.rozpus{
+    height: 50px;
+    width: 130px;
+    margin-right: 60px;
+} */
+.text{
+    background-color: #FFFFFF;
+    width: 1300px;
+    height: 89px;
+    border: #CDCED2 1px solid;
+    flex-direction: column;
+}
+/* .dopus{
+    margin-top: 5px;
+    font-size: 20px;
+}
+.tags{
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #CDCED2;
+} */
+.images{
+    background-color: #FFFFFF;
+    width: 1300px;
+    height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    border: #CDCED2 1px solid;
+}
+.media{
+    width: 1300px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: #CDCED2 1px solid;
+    justify-content: left;
+}
+.media img{
+    margin-right: 1200px;
+    flex-direction: row;
+}
+
+

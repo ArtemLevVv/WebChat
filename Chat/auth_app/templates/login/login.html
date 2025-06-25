@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load customtags %}
+
+{% block title %}
+    LOGIN PAGE
+{% endblock title %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'login/login.css' %}">
+{% endblock link %}
+
+<!-- <div class="con">
+    <div class="links">
+        <a href="" class="another">Реєстрація</a>
+        <a href="" class="now">Авторизація</a>
+    </div>
+    <h3>Приєднуйтесь до World IT</h3>
+    {% csrf_token %}
+    <div class="inputs">
+        <label for="email">Електронна пошта</label>
+        <input type="email" class="email" placeholder="you@example.com">
+
+        <label for="password">Пароль</label>
+        <input type="password" class="password" placeholder="Введи пароль">
+        
+    </div>
+    <button type="submit">Авторизуватись</button>
+</div> -->
+
+{% block content %}
+    {% render_custom_form %}
+{% endblock content %}
+    
+    
+    

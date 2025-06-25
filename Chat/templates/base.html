@@ -1,0 +1,97 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'base.css' %}">
+        {% block link %}
+        {% endblock link %}
+    </head>
+    <body>
+        
+        {% block script %}
+            
+        {% endblock script %}
+            
+
+        <header>
+            <nav>
+                <div class="icon">
+                    <img src="{% static 'images/IT.png' %}" alt="icon">
+                    <h1 class="text-icon">WOROLD IT</h1>
+                </div >
+                <div class="navi">
+                    <a href="{% url 'home_app' %}">
+                        <img src="{% static 'images/home.png' %}" alt="">
+                        Головна</a>
+                    <a href="{% url 'my_publication' %}">
+                        <img src="{% static 'images/publication.png' %}" alt="">
+                        Мої Публікації</a>
+                    <a href="{% url 'friends' %}">
+                        <img src="{% static 'images/friends.png' %}" alt="">
+                        Друзі</a>
+                    <a href="{% url 'chats' %}">
+                        <img src="{% static 'images/chats.png' %}" alt="">
+                        Чати</a>
+                    <a href="{% url 'acount_set'  %}">
+                        <img src="{% static 'images/settings.png' %}" alt="">
+                        Налаштування</a>
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button>
+                            <img src="{% static 'images/exit.png' %}" alt="">
+                            Вихід</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <main>
+        
+        {% if show_profile %}
+            <div class="profile">
+                <img src="" alt="user_icon">
+                <h2>username</h2>
+                <p class="login"></p>
+                <div class="profile_inf">
+                    <div class="posts">
+                        <h2>0</h2>
+                        <p>Дописи</p>
+                    </div>
+                    <div class="sub">
+                        <h2>0</h2>
+                        <p>Читачі</p>
+                    </div>
+                    <div class="friends">
+                        <h2>0</h2>
+                        <p>Друзі</p>
+                    </div>
+                </div>
+                <!-- <img src="{% static 'images/requests.png' %}" alt=""> -->
+            </div>
+        {% endif %}
+        <div class="content">
+            {% block content %}
+
+            {% endblock %}        
+        </div>
+
+        {% if show_modal %}
+            <div class="background">
+                <div class="modal">
+                    <form action="">
+                        <h2>Додай деталі про себе</h2>
+                        <label for="name">Ім'я</label>
+                        <input type="text" class="name" placeholder="Введіть Ваше ім'я">
+                        <label for="last_name">Прізвище</label>
+                        <input type="text" class="last_name" placeholder="Введіть Ваше прізвище"> 
+                        <label for="login">Ім'я користувача</label>
+                        <input type="text" class="login" placeholder="@">
+                        <button>Продовжити</button>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+        </main>
+    </body>
+</html>

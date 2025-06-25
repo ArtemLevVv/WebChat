@@ -1,0 +1,40 @@
+<!-- custom_user_form.html -->
+<div class="con">
+    <div class="links">
+        {% if form_name == 'register' %}
+            <a href="" class="now">Реєстрація</a>
+            <a href="/auth/login/" class="another">Авторизація</a>
+        {% elif form_name == 'auth' %}
+            <a href="/auth/signup/" class="another">Реєстрація</a>
+            <a href="" class="now">Авторизація</a>
+        {% endif %}
+    </div>
+
+    <h3>Приєднуйтесь до World IT</h3>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="inputs">
+            {% for field in form %}
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+                {% if field.errors %}
+                    <div class="form-error">{{ field.errors }}</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <button type="submit">
+            {% if form_name == 'register' %}
+                Створити акаунт
+            {% elif form_name == 'auth' %}
+                Авторизуватись
+            {% endif %}
+        </button>
+        <div>
+            {% if form_name == 'auth' %}
+                <p>Або увійдіть ща допомогую QR-коду</p>
+            {% endif %}
+        </div>
+    </form>
+</div>
